@@ -1,0 +1,6 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'André Martins'
+
+[params]
+  js = ["js/index.js"]
