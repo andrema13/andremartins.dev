@@ -2,6 +2,7 @@
 /**
    * colors
    */
+  --light-grey: rgba(43,43,44,.75);
 
   /* gradient */
 
@@ -59,10 +60,10 @@
   --ff-poppins: 'Poppins', sans-serif;
 
   /* font-size */
-  --fs-1: 24px;
+  --fs-1: 1.5rem;
   --fs-2: 18px;
   --fs-3: 17px;
-  --fs-4: 16px;
+  --fs-4: 1rem;
   --fs-5: 15px;
   --fs-6: 14px;
   --fs-7: 13px;
@@ -78,20 +79,19 @@
    * shadow
    */
 
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 0.5rem1.5rem hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 1rem 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 1rem 40px hsla(0, 0%, 0%, 0.25);
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-5: 0 1.5rem 80px hsla(0, 0%, 0%, 0.25);
 
   /**
    * transition
    */
 
-  --transition-1: 0.25s ease;
-  --transition-2: 0.5s ease-in-out;
+  --transition-1: 0.50s ease-in-out;
 
   /* margin sizes*/
-  --margin-1: 2rem
+  --margin-1:1.5rem
 }
 

@@ -10,7 +10,7 @@
   <!--- custom CSS -->
   {{ $cssResources := slice }} {{ $dir := readDir "assets/sass" }} {{ range $dir }} {{ $path := print "sass/" .Name }}
   {{ $resource := resources.Get $path }} {{ $cssResources = $cssResources | append $resource }} {{ end }} {{ $cssBundle
-  := $cssResources | resources.Concat "css/bundle.css" | resources.ToCSS | resources.Fingerprint | resources.Minify }}
+  := $cssResources | resources.Concat "bundle.css" | resources.ToCSS | resources.Fingerprint | resources.Minify }}
   <link rel="stylesheet" href="{{ $cssBundle.RelPermalink }}" />
 
   <!--- google font link -->
@@ -20,7 +20,7 @@
 
   <!--- custom JS -->
   {{ range .Site.Params.js }}
-  <script defer language="javascript" type="text/javascript" src="{{ . | absURL }}"></script>
+    <script defer language="javascript" type="text/javascript" src="{{ . | absURL }}"></script>
   {{- end }}
 
   <!--- ionicon link -->

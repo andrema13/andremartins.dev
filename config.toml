@@ -1,6 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'André Martins'
+staticDir = ['assets/images', 'assets/js']
 
 [params]
   js = ["js/index.js"]

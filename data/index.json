@@ -1,3 +1,4 @@
 {
-  "favicon_url": "./assets/images/logo.ico"
+  "favicon_url": "./assets/images/logo.ico",
+  "google_maps_url": "https://www.google.com/maps/embed/v1/place?q=Avenida+dos+Aliados,+Porto,+Portugal&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
 }
