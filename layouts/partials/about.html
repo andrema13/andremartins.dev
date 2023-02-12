@@ -3,8 +3,10 @@
     <h2 class="h2 article_title">About me</h2>
   </header>
   <section class="about_intro">
-    <p>To Do</p>
-    <p>To Do</p>
+    <h3 class="h3 about_intro_title">{{ .Site.Data.about.title }}</h3>
+    <p>{{ .Site.Data.about.intro_hello }}</p>
+    <p>{{ .Site.Data.about.intro_journey }} {{ .Site.Data.about.intro_skills }}</p>
+    <p>{{ .Site.Data.about.intro_spare_time }}</p>
   </section>
   <section class="about_personal">
     <h3 class="h3 about_personal_title">What i'm doing</h3>
