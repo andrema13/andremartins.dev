@@ -1,8 +1,24 @@
 .resume {
 	&_title {
-	margin-bottom: 1.8rem;
+		margin-bottom: 1.8rem;
 	}
-	
+
+	&_download {
+		display: flex;
+		justify-content: center;
+
+		&_button {
+			background: var(--light-grey);
+			backdrop-filter: blur(0.7rem);
+			border: 1px solid var(--jet);
+			padding: 1.25rem;
+			border-radius: 1rem;
+		}
+		@media (min-width: 35rem) {
+			justify-content: flex-end;
+		}
+	}
+
 	.timeline {
 		margin-bottom: 1.8rem;
 

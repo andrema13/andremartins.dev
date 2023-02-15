@@ -2,7 +2,6 @@
   <header>
     <h2 class="h2 article_title">Resume</h2>
   </header>
-  <!--- EXPERIENCE  -->
   <section class="timeline">
     <div class="timeline_title_wrapper">
       <div class="icon_box">
@@ -11,35 +10,18 @@
       <h3 class="h3">Experience</h3>
     </div>
     <ol class="timeline_list">
+      {{ range .Site.Data.resume.experience }}
       <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">Creative director</h4>
-        <span>2015 — Present</span>
-        <p class="timeline_text">
-          Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-          molestias exceptur.
-        </p>
+        <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
+        <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
+        <span>{{ .start_date }} - {{ .end_date }}</span>
+        <p class="timeline_text">{{ .description }}</p>
+        <h4 class="h4 timeline_list_item_skills">Skills</h4>
+        <p>{{ .skills }}</p>
       </li>
-
-      <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">Art director</h4>
-        <span>2013 — 2015</span>
-        <p class="timeline_text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-          molestias exceptur.
-        </p>
-      </li>
-
-      <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">Web designer</h4>
-        <span>2010 — 2013</span>
-        <p class="timeline_text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-          molestias exceptur.
-        </p>
-      </li>
+      {{- end }}
     </ol>
   </section>
-  <!--- EDUCATION  -->
   <section class="timeline">
     <div class="timeline_title_wrapper">
       <div class="icon_box">
@@ -48,34 +30,19 @@
       <h3 class="h3">Education</h3>
     </div>
     <ol class="timeline_list">
+      {{ range .Site.Data.resume.education }}
       <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">University school of the arts</h4>
-        <span>2007 — 2008</span>
-        <p class="timeline_text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-          molestias exceptur.
-        </p>
+        <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
+        <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
+        <span>{{ .start_date }} - {{ .end_date }}</span>
+        <p class="timeline_text">{{ .description }}</p>
+        <h4 class="h4 timeline_list_item_skills">Skills</h4>
+        <p>{{ .skills }}</p>
       </li>
-      <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">New york academy of art</h4>
-        <span>2006 — 2007</span>
-        <p class="timeline_text">
-          Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..
-        </p>
-      </li>
-      <li class="timeline_list_item">
-        <h4 class="h4 timeline_list_item_title">High school of art and design</h4>
-        <span>2002 — 2004</span>
-        <p class="timeline_text">
-          Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni
-          dolores eos.
-        </p>
-      </li>
+      {{- end }}
     </ol>
   </section>
-
-  <!--- MY SKILLS  -->
-  <section class="skill">
-    <h3 class="h3 skills-title">My skills</h3>
-  </section>
+  <div class="resume_download">
+    <a class="resume_download_button" href="{{ .Site.Data.resume.resume_src }}" target="_blank" rel="noopener noreferrer">Download</a>
+  </div>
 </article>
