@@ -1,7 +1,63 @@
 {
   "title": "Hey, I'm André, nice to meet you!",
   "intro_hello": "I'm a developer advocate who turns ideas into real-life products for the web.",
-  "intro_journey": "I embarked on my professional coding journey in 2021 and am currently a proud member of the talented team at Mindera, where we collaborate to build exceptional products.",
+  "intro_journey": "I embarked on my professional coding journey in 2021 and am currently a proud member of the talented team at Mindera, where we collaborate to build exceptional products for companies.",
   "intro_skills": "I'm well-organized, skilled at problem-solving, and a strong team player who values collaboration.",
-  "intro_spare_time": "I maintain a healthy lifestyle through regular workouts and have recently taken up the exciting sport of Padel. Also, I'm a gamer who mostly enjoys playing multiplayer games with friends. When not in front of the screen, I spend time with my loved ones and invest in self-improvement."
+  "intro_spare_time": "I maintain a healthy lifestyle through regular workouts and have recently taken up the exciting sport of Padel. Also, I'm a gamer who mostly enjoys playing multiplayer games with friends. When not in front of the screen, I spend time with my loved ones and invest in self-improvement.",
+  "doing_section": [
+    {
+      "src": "developer.svg",
+      "alt": "developer",
+      "title": "Development",
+      "text": "Building new features and improving code quality"
+    },
+    {
+      "src": "student.svg",
+      "alt": "student",
+      "title": "Learning",
+      "text": "Leveling up my SQL game to handle complex queries and data sets"
+    },
+    {
+      "src": "rocket.svg",
+      "alt": "rocket",
+      "title": "Side Projects",
+      "text": "Exploring new ideas through side projects, from concept to code. Building, learning, and having fun!"
+    },
+    {
+      "src": "target.svg",
+      "alt": "archery target",
+      "title": "Future Goals",
+      "text": "Supporting the open-source community by contributing my time and expertise to meaningful projects"
+    }
+  ],
+  "most_used_tecnologies": [
+    {
+      "src": "typescript.svg",
+      "alt": "typescript logo"
+    },
+    {
+      "src": "javascript.svg",
+      "alt": "javascript logo"
+    },
+    {
+      "src": "react.svg",
+      "alt": "react logo"
+    },
+    {
+      "src": "nodejs.svg",
+      "alt": "nodejs logo"
+    },
+    {
+      "src": "jest.svg",
+      "alt": "jest logo"
+    },
+    {
+      "src": "graphql.svg",
+      "alt": "graphql logo"
+    },
+    {
+      "src": "sass.svg",
+      "alt": "sass logo"
+    }
+  ]
 }
