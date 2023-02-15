@@ -5,7 +5,7 @@
   <title>{{ .Title }}</title>
 
   <!--- favicon -->
-  <link rel="shortcut icon" href="{{ .Site.Data.index.favicon_url }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ .Site.Data.index.favicon_url }}" type="image/png" />
 
   <!--- custom CSS -->
   {{ $cssResources := slice }} {{ $dir := readDir "assets/sass" }} {{ range $dir }} {{ $path := print "sass/" .Name }}
