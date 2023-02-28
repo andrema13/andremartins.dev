@@ -1,26 +1,29 @@
 <article class="about active" data-page="about">
   <header>
-    <h2 class="h2 article_title">About me</h2>
+    <h2 class="h2 article_title">About</h2>
   </header>
   <section class="about_intro">
     <h3 class="h3 about_intro_title">{{ .Site.Data.about.title }}</h3>
     <p>{{ .Site.Data.about.intro_hello }}</p>
-    <p>{{ .Site.Data.about.intro_journey }} {{ .Site.Data.about.intro_skills }}</p>
+    <p>
+      {{ .Site.Data.about.intro_journey }}
+      {{ .Site.Data.about.intro_skills }}
+    </p>
     <p>{{ .Site.Data.about.intro_spare_time }}</p>
   </section>
   <section class="about_personal">
     <h3 class="h3 about_personal_title">What i'm doing</h3>
     <ul class="about_personal_list">
       {{ range .Site.Data.about.doing_section }}
-      <li class="about_personal_item">
-        <div class="about_personal_icon_box">
-          <img src="{{ .src }}" alt="{{ .alt }}" width="40" />
-        </div>
-        <div class="about_personal_content-box">
-          <h4 class="h4 about_personal_item-title">{{ .title }}</h4>
-          <p class="about_personal_item-text">{{ .text }}</p>
-        </div>
-      </li>
+        <li class="about_personal_item">
+          <div class="about_personal_icon_box">
+            <img src="{{ .src }}" alt="{{ .alt }}" width="40" />
+          </div>
+          <div class="about_personal_content-box">
+            <h4 class="h4 about_personal_item-title">{{ .title }}</h4>
+            <p class="about_personal_item-text">{{ .text }}</p>
+          </div>
+        </li>
       {{- end }}
     </ul>
   </section>
@@ -28,9 +31,9 @@
     <h3 class="h3 about_technologies_title">Most Used Technologies</h3>
     <ul class="about_technologies_list has-scrollbar">
       {{ range .Site.Data.about.most_used_tecnologies }}
-      <li class="about_technologies_list_item">
-        <img src="{{ .src }}" alt="{{ .alt }}" />
-      </li>
+        <li class="about_technologies_list_item">
+          <img src="{{ .src }}" alt="{{ .alt }}" />
+        </li>
       {{- end }}
     </ul>
   </section>

@@ -32,12 +32,12 @@
   ],
   "most_used_tecnologies": [
     {
-      "src": "typescript.svg",
-      "alt": "typescript logo"
-    },
-    {
       "src": "javascript.svg",
       "alt": "javascript logo"
+    },
+    {
+      "src": "typescript.svg",
+      "alt": "typescript logo"
     },
     {
       "src": "react.svg",

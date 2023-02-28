@@ -8,9 +8,16 @@
   <link rel="shortcut icon" href="{{ .Site.Data.index.favicon_url }}" type="image/png" />
 
   <!--- custom CSS -->
-  {{ $cssResources := slice }} {{ $dir := readDir "assets/sass" }} {{ range $dir }} {{ $path := print "sass/" .Name }}
-  {{ $resource := resources.Get $path }} {{ $cssResources = $cssResources | append $resource }} {{ end }} {{ $cssBundle
-  := $cssResources | resources.Concat "bundle.css" | resources.ToCSS | resources.Fingerprint | resources.Minify }}
+  {{ $cssResources := slice }}
+  {{ $dir := readDir "assets/sass" }}
+  {{ range $dir }}
+    {{ $path := print "sass/" .Name }}
+    {{ $resource := resources.Get $path }}
+    {{ $cssResources = $cssResources | append $resource }}
+  {{ end }}
+  {{ $cssBundle
+    := $cssResources | resources.Concat "bundle.css" | resources.ToCSS | resources.Fingerprint | resources.Minify
+  }}
   <link rel="stylesheet" href="{{ $cssBundle.RelPermalink }}" />
 
   <!--- google font link -->
@@ -19,11 +26,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!--- custom JS -->
-  {{ range .Site.Params.js }}
-    <script defer language="javascript" type="text/javascript" src="{{ . | absURL }}"></script>
-  {{- end }}
+  {{ $js := resources.Get "js/index.js" }}
+  <script defer language="javascript" type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
   <!--- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--- dayJS -->
+  <script
+    type="module"
+    src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"
+    integrity="sha512-hcV6DX35BKgiTiWYrJgPbu3FxS6CsCjKgmrsPRpUPkXWbvPiKxvSVSdhWX0yXcPctOI2FJ4WP6N1zH+17B/sAA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </head>

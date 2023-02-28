@@ -1,39 +1,55 @@
 {
-  "resume_src": "resume.pdf",
+  "download_src": "resume.pdf",
   "experience": [
     {
       "company": "Trainline",
       "role": "Software Developer",
       "start_date": "2022-01-31",
       "end_date": "Present",
-      "description": "To Do",
-      "skills": "JavaScript"
+      "location": "London, United Kingdom (Remote)",
+      "description": [
+        "Collaborated as part of a team dedicated to improving the company's tech estate and enhancing the development experience. Efforts included implementing tech advancements, removing tech debt and making architectural improvements to ensure efficient, high-quality development processes.",
+        "As part of a team focused on driving user growth for Trainline through SEO initiatives, I collaborate closely with the SEO team to develop and implement effective strategies for increasing traffic and engagement, while also developing solutions using Node.js, JavaScript, TypeScript, React, and SASS that are optimized for search engines and provide an outstanding user experience for Trainline's customers."
+      ]
     },
     {
       "company": "Mindera",
       "role": "Software Developer",
       "start_date": "2022-01-10",
       "end_date": "Present",
-      "description": "To Do",
-      "skills": "JavaScript"
+      "location": "Porto, Portugal (Hybrid)",
+      "description": [
+        "Collaborating closely with a team of professionals from both my company and the client company to deliver excellent results on time and within budget.",
+        "Contributing to a culture of continuous improvement and excellence within both my company and the client company, through ongoing communication, feedback, and collaboration.",
+        "Operating within a flat organizational structure that values collaboration, open communication, and individual contributions."
+      ]
     },
     {
       "company": "Blip",
-      "role": "Intern Frontend Developer",
+      "role": "Frontend Developer Intern",
       "start_date": "2021-03-10",
       "end_date": "2021-07-10",
-      "description": "To Do",
-      "skills": "JavaScript"
+      "location": "Porto, Portugal (Remote)",
+      "description": [
+        "I utilized cutting-edge technologies, including Javascript, Typescript, RxJS, and SASS, to implement a new feature in a client application that boosted user engagement through gamification techniques. To ensure quality and reduce potential issues, I also enforced comprehensive testing for the feature using Jest and Enzyme for unit tests, as well as Cucumber and Selenium for functional tests.",
+        "Collaborated closely with a team of software developers and utilized SCRUM methodology daily, including daily stand-ups, sprint planning and retrospective, to ensure project delivery on time and to a high standard."
+      ]
     }
   ],
   "education": [
     {
-      "school": "ESTG - Politécnico do Porto",
-      "start_date": "2021-03-10",
-      "end_date": "2021-07-10"
-    },
-    {
-
+      "school": "ESTG - Instituto Politécnico do Porto",
+      "course": "Computer Engineering",
+      "degree": "Bachelor's degree",
+      "start_date": "2018-09-16",
+      "end_date": "2021-07-10",
+      "location": "Porto, Portugal",
+      "description": [
+        "Completed a rigorous program of study in computer engineering, covering topics such as programming, algorithms, data structures, computer architecture, networks, and operating systems.",
+        "Developed knowledge in various programming languages, including C, Java, Python and JavaScript. Also, gained hands-on experience building software applications, systems, and algorithms.",
+        "Contributed to a team project creating a betting advisement and bankroll management application. Gained experience working in a simulated real-world development environment using agile project management methodologies and collaboration techniques. Built a robust and user-friendly application utilizing .NET, Angular 8, Bootstrap and CSS.",
+        "Participated in an internship, gaining practical industry experience and honing my skills in a real-world setting."
+      ]
     }
   ]
 }

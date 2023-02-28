@@ -11,14 +11,17 @@
     </div>
     <ol class="timeline_list">
       {{ range .Site.Data.resume.experience }}
-      <li class="timeline_list_item">
-        <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
-        <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
-        <span>{{ .start_date }} - {{ .end_date }}</span>
-        <p class="timeline_text">{{ .description }}</p>
-        <h4 class="h4 timeline_list_item_skills">Skills</h4>
-        <p>{{ .skills }}</p>
-      </li>
+        <li class="timeline_list_item">
+          <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
+          <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
+          {{ partial "duration" . }}
+          <span>{{ .location }}</span>
+          <ul class="timeline_list_item_description">
+            {{ range .description }}
+              <li class="timeline_list_item_description_item">{{ . }}</li>
+            {{- end }}
+          </ul>
+        </li>
       {{- end }}
     </ol>
   </section>
@@ -31,18 +34,28 @@
     </div>
     <ol class="timeline_list">
       {{ range .Site.Data.resume.education }}
-      <li class="timeline_list_item">
-        <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
-        <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
-        <span>{{ .start_date }} - {{ .end_date }}</span>
-        <p class="timeline_text">{{ .description }}</p>
-        <h4 class="h4 timeline_list_item_skills">Skills</h4>
-        <p>{{ .skills }}</p>
-      </li>
+        <li class="timeline_list_item">
+          <h4 class="h4 timeline_list_item_school">{{ .school }}</h4>
+          <h2 class="h2 timeline_list_item_title">{{ .degree }}, {{ .course }}</h2>
+          <span>{{ dateFormat "Jan 2006" .start_date }} - {{ dateFormat "Jan 2006" .end_date }}</span>
+          <span>{{ .location }}</span>
+          <ul class="timeline_list_item_description">
+            {{ range .description }}
+              <li class="timeline_list_item_description_item">{{ . }}</li>
+            {{- end }}
+          </ul>
+        </li>
       {{- end }}
     </ol>
   </section>
   <div class="resume_download">
-    <a class="resume_download_button" href="{{ .Site.Data.resume.resume_src }}" target="_blank" rel="noopener noreferrer">Download</a>
+    <a
+      class="resume_download_button"
+      href="{{ .Site.Data.resume.download_src }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Download
+    </a>
   </div>
 </article>

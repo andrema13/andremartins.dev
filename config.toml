@@ -1,7 +1,7 @@
 baseURL = ''
 languageCode = 'en-us'
 title = 'André Martins'
-staticDir = ['assets/images', 'static/js', 'assets/pdf']
+staticDir = ['assets/images', 'assets/js', 'assets/pdf']
 
 [params]
   js = ["index.js"]
