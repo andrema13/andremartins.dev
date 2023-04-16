@@ -1,0 +1,68 @@
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar_info">
+    <figure class="sidebar_info_avatar_box">
+      <img
+        class="sidebar_info_avatar_box_img"
+        src="{{ .Site.Data.sidebar.avatar_url }}"
+        alt="{{ .Title }}"
+        loading="eager"
+      />
+    </figure>
+    <div class="sidebar_info_content">
+      <h1 class="sidebar_info_content_name" title="{{ .Title }}">{{ .Title }}</h1>
+      <p class="sidebar_info_content_role">{{ .Site.Data.sidebar.role }}</p>
+    </div>
+    <button class="sidebar_info_more_btn" data-sidebar-btn>
+      <ion-icon name="chevron-down" class="sidebar_info_more_btn_icon" />
+    </button>
+  </div>
+  <div class="sidebar_more_info">
+    <div class="separator"></div>
+    <ul class="contacts_list">
+      <li class="contacts_list_item">
+        <div class="icon_box">
+          <ion-icon name="mail-outline" />
+        </div>
+        <div class="contacts_list_item_info">
+          <p class="contacts_list_item_info_title">Email</p>
+          <a href="mailto:{{ .Site.Data.sidebar.email }}" class="contacts_list_item_info_contact">
+            {{ .Site.Data.sidebar.email }}
+          </a>
+        </div>
+      </li>
+      <li class="contacts_list_item">
+        <div class="icon_box">
+          <ion-icon name="logo-whatsapp" role="img" class="md hydrated" aria-label="phone portrait outline" />
+        </div>
+        <div class="contacts_list_item_info">
+          <p class="contacts_list_item_info_title">WhatsApp</p>
+          <a href="https://wa.me/351912577419" class="contacts_list_item_info_contact">
+            {{ .Site.Data.sidebar.mobile }}
+          </a>
+        </div>
+      </li>
+      <li class="contacts_list_item">
+        <div class="icon_box">
+          <ion-icon name="location-outline" />
+        </div>
+        <div class="contacts_list_item_info">
+          <p class="contacts_list_item_info_title">Location</p>
+          <address class="contacts_list_item_info_link">{{ .Site.Data.sidebar.location }}</address>
+        </div>
+      </li>
+    </ul>
+    <div class="separator"></div>
+    <ul class="social_list">
+      <li class="social_list_item">
+        <a href="{{ .Site.Data.sidebar.linkedin_url }}" class="social_link">
+          <ion-icon name="logo-linkedin" />
+        </a>
+      </li>
+      <li class="social_list_item">
+        <a href="{{ .Site.Data.sidebar.github_url }}" class="social_link">
+          <ion-icon name="logo-github" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

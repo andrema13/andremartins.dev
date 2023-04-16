@@ -1,0 +1,102 @@
+.portfolio {
+	.projects {
+		&_filter-list {
+			display: none;
+			color: var(--white-1);
+
+			&_item {
+				button {
+					color: var(--white-1);
+
+					&.active {
+						color: var(--orange-yellow-crayola);
+					}
+				}
+			}
+			@media (min-width: 35rem) {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					gap: 1.5rem;
+					margin-bottom: 2rem;
+			}
+		}
+
+		&_filter-select-box {
+			position: relative;
+			margin-bottom: 1.5rem;
+			margin-top: 1.5rem;
+
+			.filter-select {
+				background: var(--eerie-black-2);
+				color: var(--light-gray);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				padding: 12px 1rem;
+				border: 1px solid var(--jet);
+				border-radius: 1rem;
+				font-size: var(--fs-6);
+				font-weight: var(--fw-300);
+
+				.select-icon {
+					color: var(--orange-yellow-crayola);
+				}
+
+				&.active {
+					.select-icon {
+						transform: rotate(0.5turn);
+
+					}
+					& + .select-list {
+						opacity: 1;
+						visibility: visible;
+						pointer-events: all;
+					}
+				}
+				@media (min-width: 35rem) {
+					display: none;
+				}
+			}
+
+			.select-list {
+				background: var(--eerie-black-2);
+				position: absolute;
+				top: calc(100% + 6px);
+				width: 100%;
+				padding: 6px;
+				border: 1px solid var(--jet);
+				border-radius: 1rem;
+				z-index: 2;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: 0.15s ease-in-out;
+
+				&_item {
+					button {
+						background: var(--eerie-black-2);
+						color: var(--light-gray);
+						font-size: var(--fs-6);
+						font-weight: var(--fw-300);
+						text-transform: capitalize;
+						width: 100%;
+						padding: 0.5rem 10px;
+						border-radius: 0.5rem;
+						&:hover {
+							--eerie-black-2: hsl(240, 2%, 20%);
+						}
+					}
+				}
+			}
+		}
+		.project-list {
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			height: 100%;
+		}
+	}
+}
