@@ -1,5 +1,5 @@
 {
-  "title": "Hey, I'm André, nice to meet you!",
+  "title": "Hey, nice to meet you!",
   "intro_hello": "I'm a developer advocate who turns ideas into real-life products for the web.",
   "intro_journey": "I embarked on my professional coding journey in 2021 and am currently a proud member of the talented team at Mindera, where we collaborate to build exceptional products for companies.",
   "intro_skills": "I'm well-organized, skilled at problem-solving, and a strong team player who values collaboration.",
@@ -9,19 +9,19 @@
       "src": "developer.svg",
       "alt": "developer",
       "title": "Development",
-      "text": "Building new features and improving code quality"
+      "text": "Collaboratively building new features and continuously improving the code quality to ensure a streamlined and efficient development process."
     },
     {
       "src": "student.svg",
       "alt": "student",
       "title": "Learning",
-      "text": "Leveling up my SQL game to handle complex queries and data sets"
+      "text": "Leveling up my frontend knowledge studying the latest trends and best practices in web development, including JavaScript and React"
     },
     {
       "src": "rocket.svg",
       "alt": "rocket",
       "title": "Side Projects",
-      "text": "Exploring new ideas through side projects, from concept to code. Building, learning, and having fun!"
+      "text": "Exploring new ideas through side-projects, from concept to code. Building, learning, and having fun!"
     },
     {
       "src": "target.svg",
