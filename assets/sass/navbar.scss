@@ -20,6 +20,9 @@
 
 	&_item {
 		cursor: pointer;
+		&.active a {
+			color: var(--orange-yellow-crayola);
+		}
 	}
 
 	&_link {
@@ -28,9 +31,6 @@
 		font-size: var(--fs-4);
 		padding: 1.2rem 0.5rem;
 		transition: color var(--transition-1);
-		&.active {
-			color: var(--orange-yellow-crayola);
-		}
 	}
 
 	&_item:hover,

@@ -56,21 +56,27 @@ lastClickedBtn?.addEventListener("click", () => {
   lastClickedBtn = this;
 });
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const tabNavItems = document.querySelectorAll(".navbar_item");
+const tabItems = document.querySelectorAll(".tab_item");
 
-// add event to all nav link
-for (let navLink = 0; navLink < navigationLinks.length; navLink++) {
-  navigationLinks[navLink].addEventListener("click", () => {
-    for (let page = 0; page < pages.length; page++) {
-      if (navigationLinks[navLink].innerHTML.toLowerCase() === pages[page].dataset.page) {
-        pages[page].classList.add("active");
-        navigationLinks[navLink].classList.add("active");
-      } else {
-        pages[page].classList.remove("active");
-        navigationLinks[navLink]?.classList.remove("active");
-      }
-    }
+function activateTab(tab) {
+  // deactivate all tabs
+  tabNavItems.forEach((item) => {
+    item.classList.remove("active");
   });
+  tabItems.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // activate selected tab
+  const selectedTabNav = document.querySelector(`[data-tab=${tab}]`);
+  const selectedTab = document.querySelector(`.tab_item[data-tab=${tab}]`);
+  selectedTabNav.classList.add("active");
+  selectedTab.classList.add("active");
 }
+
+tabNavItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    activateTab(item.dataset.tab);
+  });
+});
