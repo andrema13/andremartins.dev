@@ -1,0 +1,15 @@
+{{ if eq .Years 0 }}
+  <span>
+    {{ dateFormat "Jan 2006" .Start }} - {{ .EndMsg }} |
+    {{ .Months }}
+    {{ .MonthsMsg }}
+  </span>
+{{ else }}
+  <span>
+    {{ dateFormat "Jan 2006" .Start }} - {{ .EndMsg }} |
+    {{ .Years }}
+    {{ .YearsMsg }}
+    {{ .Months }}
+    {{ .MonthsMsg }}
+  </span>
+{{ end }}
