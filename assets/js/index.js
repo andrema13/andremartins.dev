@@ -1,32 +1,26 @@
-'use strict';
+"use strict";
 
 // element toggle function
-const elementToggleFunc = function (elem) {
-  elem.classList.toggle('active');
-};
+const elementToggleFunc = (elem) => elem.classList.toggle("active");
 
 // sidebar variables
-const sidebar = document.querySelector('[data-sidebar]');
-const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener('click', function () {
-  elementToggleFunc(sidebar);
-});
+sidebarBtn.addEventListener("click", () => elementToggleFunc(sidebar));
 
 // custom select variables
-const select = document.querySelector('[data-select]');
-const selectItems = document.querySelectorAll('[data-select-item]');
-const selectValue = document.querySelector('[data-select-value]');
-const filterBtn = document.querySelectorAll('[data-filter-btn]');
+// const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-select-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener('click', function () {
-  elementToggleFunc(this);
-});
+// select.addEventListener("click", () => elementToggleFunc(this));
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener('click', function () {
+for (let selectItem = 0; selectItem < selectItems.length; selectItem++) {
+  selectItems[selectItem].addEventListener("click", () => {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
@@ -35,16 +29,16 @@ for (let i = 0; i < selectItems.length; i++) {
 }
 
 // filter variables
-const filterItems = document.querySelectorAll('[data-filter-item]');
+const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === 'all') {
-      filterItems[i].classList.add('active');
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add('active');
+const filterFunc = (selectedValue) => {
+  for (let filterItem = 0; filterItem < filterItems.length; filterItem++) {
+    if (selectedValue === "all") {
+      filterItems[filterItem].classList.add("active");
+    } else if (selectedValue === filterItems[filterItem].dataset.category) {
+      filterItems[filterItem].classList.add("active");
     } else {
-      filterItems[i].classList.remove('active');
+      filterItems[filterItem].classList.remove("active");
     }
   }
 };
@@ -52,33 +46,30 @@ const filterFunc = function (selectedValue) {
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
-  filterBtn[i].addEventListener('click', function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+lastClickedBtn?.addEventListener("click", () => {
+  let selectedValue = this.innerText.toLowerCase();
+  selectValue.innerText = this.innerText;
+  filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove('active');
-    this.classList.add('active');
-    lastClickedBtn = this;
-  });
-}
+  lastClickedBtn.classList.remove("active");
+  this.classList.add("active");
+  lastClickedBtn = this;
+});
 
 // page navigation variables
-const navigationLinks = document.querySelectorAll('[data-nav-link]');
-const pages = document.querySelectorAll('[data-page]');
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener('click', function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add('active');
-        navigationLinks[i].classList.add('active');
-        window.scrollTo(0, 0);
+for (let navLink = 0; navLink < navigationLinks.length; navLink++) {
+  navigationLinks[navLink].addEventListener("click", () => {
+    for (let page = 0; page < pages.length; page++) {
+      if (navigationLinks[navLink].innerHTML.toLowerCase() === pages[page].dataset.page) {
+        pages[page].classList.add("active");
+        navigationLinks[navLink].classList.add("active");
       } else {
-        pages[i].classList.remove('active');
-        navigationLinks[i].classList.remove('active');
+        pages[page].classList.remove("active");
+        navigationLinks[navLink]?.classList.remove("active");
       }
     }
   });
