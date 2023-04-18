@@ -1,5 +1,4 @@
 .navbar {
-	display: none;
 	background: var(--light-grey);
 	backdrop-filter: blur(0.7rem);
 	border: 1px solid var(--jet);
@@ -39,12 +38,7 @@
 		color: var(--light-gray-70);
 	}
 
-	@media (pointer: coarse) {
-		display: block;
-	}
-
 	@media (min-width: 35rem) {
-		display: block;
 		position: absolute;
 		bottom: auto;
 		left: auto;
