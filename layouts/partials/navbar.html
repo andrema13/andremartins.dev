@@ -1,13 +1,9 @@
 <nav class="navbar">
   <ul class="navbar_list">
-    <li class="navbar_item active" data-tab="tab1">
-      <a class="navbar_link">About</a>
-    </li>
-    <li class="navbar_item" data-tab="tab2">
-      <a class="navbar_link">Resume</a>
-    </li>
-    {{/*  <li class="navbar_item">
-      <a class="navbar_link" data-nav-link>Portfolio</a>
-    </li>  */}}
+    {{ range $elem_index, $elem_val := .Site.Data.navbar }}
+      <li class="navbar_item {{ .class }}" data-tab="tab{{ add $elem_index 1 }}">
+        <a class="navbar_link" type="button">{{ .link }}</a>
+      </li>
+    {{- end }}
   </ul>
 </nav>
