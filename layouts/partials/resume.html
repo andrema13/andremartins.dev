@@ -1,61 +1,63 @@
-<article class="tab_item resume" data-tab="tab2">
+<article class="resume tab_item" data-tab="tab2">
   <header>
-    <h2 class="h2 article_title">Resume</h2>
+    <h2 class="article_title">Resume</h2>
   </header>
-  <section class="timeline">
-    <div class="timeline_title_wrapper">
-      <div class="icon_box">
-        <ion-icon name="briefcase-outline"></ion-icon>
+  <div class="article_body has-scrollbar">
+    <section class="timeline">
+      <div class="timeline_title_wrapper">
+        <div class="icon_box">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+        <h3 class="timeline_title_wrapper_section">Experience</h3>
       </div>
-      <h3 class="h3">Experience</h3>
-    </div>
-    <ol class="timeline_list">
-      {{ range .Site.Data.resume.experience }}
-        <li class="timeline_list_item">
-          <h4 class="h4 timeline_list_item_company">{{ .company }}</h4>
-          <h2 class="h2 timeline_list_item_title">{{ .role }}</h2>
-          {{ partial "duration" . }}
-          <span>{{ .location }}</span>
-          <ul class="timeline_list_item_description">
-            {{ range .description }}
-              <li class="timeline_list_item_description_item">{{ . }}</li>
-            {{- end }}
-          </ul>
-        </li>
-      {{- end }}
-    </ol>
-  </section>
-  <section class="timeline">
-    <div class="timeline_title_wrapper">
-      <div class="icon_box">
-        <ion-icon name="book-outline"></ion-icon>
+      <ol class="timeline_list">
+        {{ range .Site.Data.resume.experience }}
+          <li class="timeline_list_item">
+            <h4 class="timeline_list_item_company">{{ .company }}</h4>
+            <h2 class="timeline_list_item_title">{{ .role }}</h2>
+            {{ partial "duration" . }}
+            <span>{{ .location }}</span>
+            <ul class="timeline_list_item_description">
+              {{ range .description }}
+                <li class="timeline_list_item_description_item">{{ . }}</li>
+              {{- end }}
+            </ul>
+          </li>
+        {{- end }}
+      </ol>
+    </section>
+    <section class="timeline">
+      <div class="timeline_title_wrapper">
+        <div class="icon_box">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <h3 class="timeline_title_wrapper_section">Education</h3>
       </div>
-      <h3 class="h3">Education</h3>
+      <ol class="timeline_list">
+        {{ range .Site.Data.resume.education }}
+          <li class="timeline_list_item">
+            <h4 class="timeline_list_item_school">{{ .school }}</h4>
+            <h2 class="timeline_list_item_title">{{ .degree }}, {{ .course }}</h2>
+            <span>{{ dateFormat "Jan 2006" .start_date }} - {{ dateFormat "Jan 2006" .end_date }}</span>
+            <span>{{ .location }}</span>
+            <ul class="timeline_list_item_description">
+              {{ range .description }}
+                <li class="timeline_list_item_description_item">{{ . }}</li>
+              {{- end }}
+            </ul>
+          </li>
+        {{- end }}
+      </ol>
+    </section>
+    <div class="resume_download">
+      <a
+        class="resume_download_button"
+        href="{{ .Site.Data.resume.download_src }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download
+      </a>
     </div>
-    <ol class="timeline_list">
-      {{ range .Site.Data.resume.education }}
-        <li class="timeline_list_item">
-          <h4 class="h4 timeline_list_item_school">{{ .school }}</h4>
-          <h2 class="h2 timeline_list_item_title">{{ .degree }}, {{ .course }}</h2>
-          <span>{{ dateFormat "Jan 2006" .start_date }} - {{ dateFormat "Jan 2006" .end_date }}</span>
-          <span>{{ .location }}</span>
-          <ul class="timeline_list_item_description">
-            {{ range .description }}
-              <li class="timeline_list_item_description_item">{{ . }}</li>
-            {{- end }}
-          </ul>
-        </li>
-      {{- end }}
-    </ol>
-  </section>
-  <div class="resume_download">
-    <a
-      class="resume_download_button"
-      href="{{ .Site.Data.resume.download_src }}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Download
-    </a>
   </div>
 </article>

@@ -2,14 +2,14 @@
 	.projects {
 		&_filter-list {
 			display: none;
-			color: var(--white-1);
+			color: var(--white);
 
 			&_item {
 				button {
-					color: var(--white-1);
+					color: var(--white);
 
 					&.active {
-						color: var(--orange-yellow-crayola);
+						color: var(--vegas-gold);
 					}
 				}
 			}
@@ -28,20 +28,19 @@
 			margin-top: 1.5rem;
 
 			.filter-select {
-				background: var(--eerie-black-2);
-				color: var(--light-gray);
+				background: var(--smoky-black);
+				color: var(--grey);
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				width: 100%;
 				padding: 12px 1rem;
-				border: 1px solid var(--jet);
 				border-radius: 1rem;
 				font-size: var(--fs-6);
 				font-weight: var(--fw-300);
 
 				.select-icon {
-					color: var(--orange-yellow-crayola);
+					color: var(--vegas-gold);
 				}
 
 				&.active {
@@ -61,12 +60,11 @@
 			}
 
 			.select-list {
-				background: var(--eerie-black-2);
+				background: var(--smoky-black);
 				position: absolute;
 				top: calc(100% + 6px);
 				width: 100%;
 				padding: 6px;
-				border: 1px solid var(--jet);
 				border-radius: 1rem;
 				z-index: 2;
 				opacity: 0;
@@ -76,8 +74,8 @@
 
 				&_item {
 					button {
-						background: var(--eerie-black-2);
-						color: var(--light-gray);
+						background: var(--smoky-black);
+						color: var(--grey);
 						font-size: var(--fs-6);
 						font-weight: var(--fw-300);
 						text-transform: capitalize;
@@ -85,7 +83,7 @@
 						padding: 0.5rem 10px;
 						border-radius: 0.5rem;
 						&:hover {
-							--eerie-black-2: hsl(240, 2%, 20%);
+							--smoky-black: hsl(240, 2%, 20%);
 						}
 					}
 				}
