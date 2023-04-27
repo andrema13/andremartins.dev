@@ -10,9 +10,9 @@
 		&_button {
 			background: var(--light-grey);
 			backdrop-filter: blur(0.7rem);
-			border: 1px solid var(--jet);
 			padding: 1.25rem;
 			border-radius: 1rem;
+			color: var(--vegas-gold);
 		}
 		@media (min-width: 35rem) {
 			justify-content: flex-end;
@@ -28,6 +28,10 @@
 			gap: 1rem;
 			margin-bottom: 1.5rem;
 			margin-left: 0.5rem;
+
+			&_section {
+				margin-bottom: unset;
+			}
 		}
 
 		&_list {
@@ -51,7 +55,7 @@
 					left: -1.8rem;
 					width: 1px;
 					height: calc(100% + 50px);
-					background: var(--jet);
+					background: var(--light-grey);
 				}
 				&::after {
 					content: "";
@@ -60,9 +64,9 @@
 					left: -2.075rem;
 					height: 0.75rem;
 					width: 0.75rem;
-					background: var(--text-gradient-yellow);
+					background: var(--vegas-gold);
 					border-radius: 50%;
-					box-shadow: 0 0 0 0.3rem var(--jet);
+					box-shadow: 0 0 0 0.3rem var(--lighter-grey);
 				}
 
 				&_title {
@@ -73,14 +77,14 @@
 				&_description {
 					margin-top: 0.5rem;
 					&_item {
-						color: var(--white-1);
+						color: var(--white);
 						list-style: inside;
 					}
 				}
 			}
 		}
 		&_text {
-			color: var(--light-gray);
+			color: var(--grey);
 			font-weight: var(--fw-300);
 			line-height: 1.6;
 		}
