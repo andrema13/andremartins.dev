@@ -66,7 +66,7 @@ main {
   flex-direction: column;
   margin: var(--margin-1);
 
-  @media (min-width: 65rem) {
+  @media (min-width: 64rem) {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
@@ -140,17 +140,19 @@ address {
 article {
   display: none;
   background: var(--grey);
-  border-radius: 0 0 1.2rem 1.2rem;
+  border-radius: 0 0 1rem 1rem;
   padding: 0rem 0 2rem 2rem;
   box-shadow: var(--shadow-1);
 
   &.active {
     display: block;
     animation: fade 0.5s ease backwards;
+    height: 80%;
 
     @media (min-width: 35rem) {
-      border-radius: 1.2rem;
+      border-radius: 1rem;
       padding: 2rem 0 2rem 2rem;
+      height: 100%;
     }
   }
 }
@@ -158,15 +160,11 @@ article {
 .article {
   &_body {
       overflow-y: auto;
-      max-height: calc(100vh - 19rem);
       padding-right: 2rem;
+      height: 100%;
 
       @media (min-width: 35rem) {
-        max-height: calc(100vh - 22rem);
-      }
-
-      @media (min-width: 65rem) {
-        max-height: calc(100vh - 11.25rem);
+        height: 90%;
       }
   }
 }
