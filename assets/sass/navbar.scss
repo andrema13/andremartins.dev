@@ -6,13 +6,12 @@
 
 	@media (min-width: 35rem) {
 		position: absolute;
-		bottom: auto;
-		left: auto;
 		right: 0;
 		width: max-content;
 		border-radius: 0 1rem;
 		padding: 0 1rem;
 		background-color: var(--light-grey);
+		z-index: 1;
 	}
 
 	&_list {

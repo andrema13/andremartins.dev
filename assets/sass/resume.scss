@@ -8,11 +8,11 @@
 		justify-content: center;
 
 		&_button {
-			background: var(--light-grey);
+			background: var(--vegas-gold);
 			backdrop-filter: blur(0.7rem);
 			padding: 1.25rem;
 			border-radius: 1rem;
-			color: var(--vegas-gold);
+			color: var(--lighter-grey);
 		}
 		@media (min-width: 35rem) {
 			justify-content: flex-end;
