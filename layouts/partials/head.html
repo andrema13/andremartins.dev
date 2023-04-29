@@ -1,14 +1,25 @@
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3VD84ML53"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J3VD84ML53');
+  </script>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ .Title }}</title>
 
   <!--- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Data.index.favicon_apple_touch }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Data.index.favicon_32x32 }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Data.index.favicon_16x16 }}">
-  <link rel="manifest" href="{{ .Site.Data.index.favicon_manifest }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Data.index.favicon_apple_touch }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Data.index.favicon_32x32 }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Data.index.favicon_16x16 }}" />
+  <link rel="manifest" href="{{ .Site.Data.index.favicon_manifest }}" />
 
   <!--- custom CSS -->
   {{ $cssResources := slice }}
