@@ -2,7 +2,7 @@
   <ul class="navbar_list">
     {{ range $elem_index, $elem_val := .Site.Data.navbar }}
       <li class="navbar_item {{ .class }}" data-tab="tab{{ add $elem_index 1 }}">
-        <a class="navbar_link" type="button">{{ .link }}</a>
+        <a class="navbar_link">{{ .link }}</a>
       </li>
     {{- end }}
   </ul>

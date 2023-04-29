@@ -1,7 +1,7 @@
 {{ $start := time .start_date }}
-{{ if eq .end_date "Present" }}
+{{ if eq .end_date "Now" }}
   {{ $end := now }}
-  {{ partial "calc" (dict "Start" $start "End" $end "Present" .end_date) }}
+  {{ partial "calc" (dict "Start" $start "End" $end "Now" .end_date) }}
 {{ else }}
   {{ $end := time .end_date }}
   {{ partial "calc" (dict "Start" $start "End" $end) }}

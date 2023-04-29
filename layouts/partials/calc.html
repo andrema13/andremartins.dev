@@ -4,5 +4,5 @@
 {{ $year_msg := cond (gt $years 1) "yrs" "yr" }}
 {{ $months := math.Round (sub (div $days 30.44) (mul $years 12)) }}
 {{ $month_msg := cond (gt $months 1) "mos" "mo" }}
-{{ $end_msg := cond (eq .Present "Present") .Present (dateFormat "Jan 2006" .End) }}
+{{ $end_msg := cond (eq .Now "Now") .Now (dateFormat "Jan 2006" .End) }}
 {{ partial "duration_msg" (dict "Years" $years "YearsMsg" $year_msg "Months" $months "MonthsMsg" $month_msg "EndMsg" $end_msg "Start" .Start) }}

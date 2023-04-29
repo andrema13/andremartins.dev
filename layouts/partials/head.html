@@ -5,7 +5,10 @@
   <title>{{ .Title }}</title>
 
   <!--- favicon -->
-  <link rel="shortcut icon" href="{{ .Site.Data.index.favicon_url }}" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Data.index.favicon_apple_touch }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Data.index.favicon_32x32 }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Data.index.favicon_16x16 }}">
+  <link rel="manifest" href="{{ .Site.Data.index.favicon_manifest }}">
 
   <!--- custom CSS -->
   {{ $cssResources := slice }}
