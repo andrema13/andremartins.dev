@@ -1,4 +1,7 @@
 {
 
-  "favicon_url": "favicon.png"
+  "favicon_apple_touch": "apple-touch-icon.png",
+  "favicon_32x32": "favicon-32x32.png",
+  "favicon_16x16": "favicon-16x16.png",
+  "favicon_manifest": "site.webmanifest"
 }
