@@ -3,5 +3,11 @@ languageCode = 'en-us'
 title = 'André Martins'
 staticDir = ['assets/images', 'assets/js', 'assets/pdf']
 
+disableKinds = ["taxonomyTerm"]
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
 [params]
   js = ["index.js"]
