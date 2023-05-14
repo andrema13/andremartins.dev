@@ -4,12 +4,12 @@
       <img
         class="sidebar_info_avatar_box_img"
         src="{{ .Site.Data.sidebar.avatar_url }}"
-        alt="{{ .Title }}"
+        alt="{{ .Site.Data.sidebar.title }}"
         loading="eager"
       />
     </figure>
     <div class="sidebar_info_content">
-      <h1 class="sidebar_info_content_name" title="{{ .Title }}">{{ .Title }}</h1>
+      <h1 class="sidebar_info_content_name" title="{{ .Site.Data.sidebar.title }}">{{ .Site.Data.sidebar.title }}</h1>
       <p class="sidebar_info_content_role">{{ .Site.Data.sidebar.role }}</p>
     </div>
     <button class="sidebar_info_more_btn" data-sidebar-btn>

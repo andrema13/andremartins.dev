@@ -1,6 +1,6 @@
 baseURL = ''
 languageCode = 'en-us'
-title = 'André Martins'
+title = 'André Martins | Software Developer'
 staticDir = ['assets/images', 'assets/js', 'assets/pdf']
 
 disableKinds = ["taxonomyTerm"]

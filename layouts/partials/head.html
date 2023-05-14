@@ -13,7 +13,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Check out my personal page of a software developer experienced in JavaScript, React, TypeScript, GraphQL and more. Find information on projects, skills, and contact details." />
+  <meta name="description" content="{{ .Site.Data.index.meta_description }}" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="André Martins | Software Developer">
+  <meta property="og:url" content="https://andremartins.dev">
+  <meta property="og:image" content="https://andremartins.dev/{{ .Site.Data.sidebar.avatar_url }}">
+  <meta property="og:description" content="{{ .Site.Data.index.meta_description }}">
   <title>{{ .Title }}</title>
 
   <!--- favicon -->
