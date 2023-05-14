@@ -44,11 +44,11 @@
 			}
 		}
 
-		& a {
+		& button {
 			color: var(--white);
 		}
 
-		&.active a{
+		&.active button {
 			color: var(--lighter-grey);
 
 			@media (min-width: 35rem) {
