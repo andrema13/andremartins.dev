@@ -161,10 +161,10 @@ article {
   &_body {
       overflow-y: auto;
       padding-right: 2rem;
-      height: 100%;
+      height: 57dvh;
 
-      @media (min-width: 35rem) {
-        height: 90%;
+      @media (max-height: 30rem) {
+        height: 80dvh;
       }
   }
 }

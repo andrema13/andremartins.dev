@@ -1,13 +1,11 @@
 .main-content {
   position: relative;
-  min-width: 50%;
-  height: 75dvh;
 
   @media (min-width: 35rem) {
-    height: 95dvh;
+    width: 75%;
   }
 
-  @media (min-width: 48rem) and (min-height:64rem) {
-    height: 80dvh;
+  @media (width: 48rem) and (height: 64rem) {
+    width: 100%;
   }
 }
