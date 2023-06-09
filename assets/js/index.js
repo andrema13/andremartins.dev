@@ -80,3 +80,19 @@ tabNavItems.forEach((item) => {
     activateTab(item.dataset.tab);
   });
 });
+
+const encEmail = "aW5mb0BhbmRyZW1hcnRpbnMuZGV2";
+const emailForm = document.getElementById("contact_email");
+emailForm.setAttribute("href", "mailto:".concat(atob(encEmail)));
+
+const encPhone = "OTEyNTc3NDE5";
+const phoneForm = document.getElementById("contact_phone");
+phoneForm.setAttribute("href", "https://wa.me/".concat(atob(encPhone)));
+
+const encGithub = "aHR0cHM6Ly93d3cuZ2l0aHViLmNvbS9hbmRyZW1hMTM=";
+const githubForm = document.getElementById("contact_github");
+githubForm.setAttribute("href", atob(encGithub));
+
+const encLinkedin = "aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2FtLWRldg==";
+const linkedinForm = document.getElementById("contact_linkedin");
+linkedinForm.setAttribute("href", atob(encLinkedin));

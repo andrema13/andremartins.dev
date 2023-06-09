@@ -25,7 +25,7 @@
         </div>
         <div class="contacts_list_item_info">
           <p class="contacts_list_item_info_title">Email</p>
-          <a href="mailto:{{ .Site.Data.sidebar.email }}" class="contacts_list_item_info_contact">
+          <a id="contact_email" href="" class="contacts_list_item_info_contact">
             {{ .Site.Data.sidebar.email }}
           </a>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="contacts_list_item_info">
           <p class="contacts_list_item_info_title">WhatsApp</p>
-          <a href="https://wa.me/351912577419" class="contacts_list_item_info_contact">
+          <a id="contact_phone" href="" class="contacts_list_item_info_contact">
             {{ .Site.Data.sidebar.mobile }}
           </a>
         </div>
@@ -54,12 +54,12 @@
     <div class="separator"></div>
     <ul class="social_list">
       <li class="social_list_item">
-        <a href="{{ .Site.Data.sidebar.linkedin_url }}" class="social_link">
+        <a id="contact_linkedin" href="" class="social_link">
           <ion-icon name="logo-linkedin" />
         </a>
       </li>
       <li class="social_list_item">
-        <a href="{{ .Site.Data.sidebar.github_url }}" class="social_link">
+        <a id="contact_github" href="" class="social_link">
           <ion-icon name="logo-github" />
         </a>
       </li>
